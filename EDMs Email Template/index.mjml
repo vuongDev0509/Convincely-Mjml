@@ -115,7 +115,7 @@
                 padding-left: 20px;
             }
             .bt-price .item:last-child ._sub-price{
-                padding-left: 35px;
+                padding-left: 46px;
             }
             .bt-price .item ._price:before{
                 content: " ";
@@ -239,8 +239,8 @@
             }
             @media only screen and (max-width: 599px){
                 .heading-ss-hero > div{
-                    font-size: 24px !important;
-                    line-height: 30px !important;
+                    font-size: 20px !important;
+                    line-height: 25px !important
                 }
                 ._column-no-padding-mobi > table > tbody > tr > td{
                     padding: 0 !important;
@@ -252,6 +252,25 @@
                 .section-main .mj-column-per-50{
                     width: 100% !important;
                     max-width: 400px;
+                }
+                .bt-text-acn p:first-child{
+                       width: 56px;
+                       margin-right: 10px;
+                }
+                .bt-text-acn p:last-child{
+                    width: calc(100% - 66px);
+                }
+                .bt-price .item:first-child ._sub-price{
+                    text-align: left;
+                    padding-left: 30px; 
+                }
+                .bt-price .item:last-child ._sub-price{
+                    text-align: right;
+                    padding-right: 9px;
+                    padding-left: 0px;
+                }
+                .section-hero{
+                    max-width: 430px !important;
                 }
             }
             @media only screen and (max-width: 480px){
@@ -270,7 +289,7 @@
                 }
                 ._text-footer>div{
                     margin-top: 15px;
-                }
+                }               
             }
         </mj-style>
    </mj-head>
@@ -284,8 +303,9 @@
             <mj-image width="107px" href="#!" padding="0" align="right" src="./assets/images/sumo-logo.png" />
         </mj-column>
     </mj-section>
+
      <!-- section hero -->
-    <mj-section padding="0 15px">
+    <mj-section padding="0 15px" css-class="section-hero">
         <mj-column> 
             <mj-text color="#157EF4" font-size="30px" css-class="heading-ss-hero"
                     line-height="35px" padding="0" letter-spacing="-0.16px" font-weight="700"> 
