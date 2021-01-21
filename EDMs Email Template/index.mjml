@@ -186,11 +186,18 @@
                 font-weight: inherit;
             }
             .column-border > table > tbody > tr > td > table > tbody{
-                border: 1px solid rgba(64, 64, 64, 0.2)
+                border: 1px solid rgba(64, 64, 64, 0.2);
+                border-bottom-color: rgba(64, 64, 64, 0.6);
+            }
+            ._text-border-bottom{
+                 border-bottom: 1px solid rgba(64, 64, 64, 0.2);
             }
             .column-not-border-bottom.column-border > table > tbody > tr > td > table > tbody{
                 border-bottom: none;
             }
+             .column-not-border-top.column-border > table > tbody > tr > td > table > tbody{
+                 border-top: none;
+             }
             ._text-between > div{
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -224,11 +231,52 @@
                 -webkit-justify-content: flex-end;
                 justify-content: flex-end;
             }
+            .bt-header > table > tbody > tr > td{
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flexbox;
+                display: -o-flex;
+            }
+            @media only screen and (max-width: 599px){
+                .heading-ss-hero > div{
+                    font-size: 24px !important;
+                    line-height: 30px !important;
+                }
+                ._column-no-padding-mobi > table > tbody > tr > td{
+                    padding: 0 !important;
+                }
+
+                ._column-no-padding-mobi:last-child{
+                    margin-top: 15px;
+                } 
+                .section-main .mj-column-per-50{
+                    width: 100% !important;
+                    max-width: 400px;
+                }
+            }
+            @media only screen and (max-width: 480px){
+                .logo-footer{
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flexbox;
+                    display: -o-flex;
+                }
+                ._text-footer>div, .logo-footer{
+                     -webkit-box-pack: center;
+                    -moz-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                }
+                ._text-footer>div{
+                    margin-top: 15px;
+                }
+            }
         </mj-style>
    </mj-head>
   <mj-body>
     <!--Header -->
-    <mj-section padding="32px 15px 50px 15px">
+    <mj-section padding="32px 15px 50px 15px" css-class="bt-header">
         <mj-column> 
             <mj-image width="116px" href="#!" padding="0" align="left" src="./assets/images/acn-logo.png" />
         </mj-column>
@@ -239,7 +287,7 @@
      <!-- section hero -->
     <mj-section padding="0 15px">
         <mj-column> 
-            <mj-text color="#157EF4" font-size="30px" 
+            <mj-text color="#157EF4" font-size="30px" css-class="heading-ss-hero"
                     line-height="35px" padding="0" letter-spacing="-0.16px" font-weight="700"> 
                 Looking for a better energy deal? You came to the right place!
             </mj-text>
@@ -248,127 +296,66 @@
             </mj-text>
         </mj-column>
     </mj-section>
-    <mj-section padding="0 15px">
-            <mj-column padding-right="4px" css-class="column-border column-not-border-bottom"> 
-                <mj-text css-class="bt-heading" container-background-color="#157EF4" 
-                            color="#fff" align="center" font-size="20px" line-height="27px" 
-                            letter-spacing="-0.32px" padding="16px 0px"> 
-                    <h2><span>sumo</span>ACN EASY </h2>
-                </mj-text>
 
-                <mj-text padding="16px 20px 0 32px" container-background-color="#fff">
-                    <div class="bt-text-acn"> 
-                        <p>15%</p>
-                        <p><span>less</span> than the VictorianDefault Offer.</p>
+    <!-- section main -->
+    <mj-section padding="0 15px" css-class="section-main">
+        <mj-column padding-right="5px" css-class="column-border _column-no-padding-mobi">
+            <mj-text css-class="bt-heading" container-background-color="#157EF4" 
+                color="#fff" align="center" font-size="18px" line-height="25px" 
+                letter-spacing="-0.32px" padding="17px 0px"> 
+                <h2><span>sumo</span>ACN EASY </h2>
+            </mj-text>
+
+            <mj-text padding="16px 20px 0 32px" container-background-color="#fff">
+                <div class="bt-text-acn"> 
+                    <p>15%</p>
+                    <p><span>less</span> than the VictorianDefault Offer.</p>
+                </div>
+            </mj-text>
+
+            <mj-text padding="13px 20px 0 20px" container-background-color="#fff">
+                <div class="bt-price"> 
+                    <div class="item">  
+                        <p class="_price"><sup>$</sup>103<span>mo</span> </p>
+                        <span class="_sub-price">$1,235 yr </span>
                     </div>
-                </mj-text>
-
-                <mj-text padding="13px 20px 0 20px" container-background-color="#fff">
-                    <div class="bt-price"> 
-                        <div class="item">  
-                            <p class="_price"><sup>$</sup>103<span>mo</span> </p>
-                            <span class="_sub-price">$1,235 yr </span>
-                        </div>
-                        <div class="item">  
-                            <p class="_price"><sup>$</sup>105<span>mo</span> </p>
-                            <span class="_sub-price">$1,265 yr </span>
-                        </div>
+                    <div class="item">  
+                        <p class="_price"><sup>$</sup>105<span>mo</span> </p>
+                        <span class="_sub-price">$1,265 yr </span>
                     </div>
-                </mj-text>
+                </div>
+            </mj-text>
 
-                <mj-text padding="12px 20px 0 20px" container-background-color="#fff"
-                        font-size="13px" line-height="120%" letter-spacing="-0.32px" color="#404040"
-                        align="center">
-                    GST incl. <a class="_underlined">Estimated price</a> based on a household using 4000kWh/yr on a single rate tariff in the Citipower distribution area.
-                </mj-text>
+            <mj-text padding="12px 20px 0 20px" container-background-color="#fff"
+                    font-size="12px" line-height="120%" letter-spacing="-0.32px" color="#404040"
+                    align="center">
+                GST incl. <a class="_underlined">Estimated price</a> based on a household using 4000kWh/yr on a single rate tariff in the Citipower distribution area.
+            </mj-text>
 
-                <mj-text padding="16px 20px" container-background-color="#fff">
-                    <div class="bt-btn">  
-                        <a href="#!"> I want sumoACN EASY </a>
+            <mj-text padding="16px 20px" container-background-color="#fff">
+                <div class="bt-btn">  
+                    <a href="#!"> I want sumoACN EASY </a>
+                </div>
+            </mj-text>
+
+            <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
+                <div class="list-acn"> 
+                    <div class="_item-acn">  
+                        <img src="./assets/images/icon-check.svg" alt="icon" / >
+                        <div class="_text">  
+                            <b>Great rates for direct debit and e-bills only.</b> <a href="#!" class="_underlined">Conditions apply</a>
+                        </div> 
                     </div>
-                </mj-text>
-
-                <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
-                    <div class="list-acn"> 
-                        <div class="_item-acn">  
-                            <img src="./assets/images/icon-check.svg" alt="icon" / >
-                            <div class="_text">  
-                                <b>Great rates for direct debit and e-bills only.</b> <a href="#!" class="_underlined">Conditions apply</a>
-                            </div> 
-                        </div>
-                        <div class="_item-acn">  
-                            <img src="./assets/images/icon-check.svg" alt="icon" / >
-                            <div class="_text">  
-                                <b>15% less than the Victorian Default Offer</b>
-                            </div> 
-                        </div>
+                    <div class="_item-acn">  
+                        <img src="./assets/images/icon-check.svg" alt="icon" / >
+                        <div class="_text">  
+                            <b>15% less than the Victorian Default Offer</b>
+                        </div> 
                     </div>
-                </mj-text>
+                </div>
+            </mj-text>
 
-            </mj-column> 
-
-
-            <mj-column padding-left="4px" css-class="column-border column-not-border-bottom"> 
-                 <mj-text css-class="bt-heading" container-background-color="#009908" 
-                            color="#fff" align="center" font-size="20px" line-height="28px" 
-                            letter-spacing="-0.32px" padding="16px 0px"> 
-                    <h2><span>Sumo</span>ACN </h2>
-                </mj-text>
-            
-               <mj-text padding="16px 20px 0 32px" container-background-color="#fff">
-                    <div class="bt-text-acn"> 
-                        <p>10%</p>
-                        <p><span>less</span> than the Victorian Default Offer.</p>
-                    </div>
-                </mj-text>
-
-                <mj-text padding="13px 20px 0 20px" container-background-color="#fff">
-                    <div class="bt-price"> 
-                        <div class="item">  
-                            <p class="_price"><sup>$</sup>107<span>mo</span> </p>
-                            <span class="_sub-price">$1,279 yr </span>
-                        </div>
-                        <div class="item">  
-                            <p class="_price"><sup>$</sup>110<span>mo</span> </p>
-                            <span class="_sub-price">$1,320 yr </span>
-                        </div>
-                    </div>
-                </mj-text>
-
-                <mj-text padding="12px 20px 0 20px" container-background-color="#fff"
-                        font-size="13px" line-height="120%" letter-spacing="-0.32px" color="#404040"
-                        align="center">
-                    GST incl. <a class="_underlined">Estimated price</a> based on a household using 4000kWh/yr on a single rate tariff in the Citipower distribution area.
-                </mj-text>
-
-                <mj-text padding="16px 20px" container-background-color="#fff">
-                    <div class="bt-btn">  
-                        <a href="#!"> I want sumoACN EASY </a>
-                    </div>
-                </mj-text>
-
-                <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
-                    <div class="list-acn"> 
-                        <div class="_item-acn">  
-                            <img src="./assets/images/icon-check.svg" alt="icon" / >
-                            <div class="_text">  
-                                <b>Basic energy plan with flexible payment options</b>
-                            </div> 
-                        </div>
-                        <div class="_item-acn">  
-                            <img src="./assets/images/icon-check.svg" alt="icon" / >
-                            <div class="_text">  
-                                <b>10% less than the Victorian Default Offer</b>
-                            </div> 
-                        </div>
-                    </div>
-                </mj-text>
-
-            </mj-column> 
-    </mj-section>
-    <mj-section padding="0 15px">
-        <mj-column padding-right="4px" css-class="column-border column-not-border-bottom">
-            <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
+             <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
                 Electricity rates 
             </mj-text>
 
@@ -392,47 +379,11 @@
                 All prices include GST.
             </mj-text>
 
-            <mj-text padding="8px 20px 16px 20px" font-size="12px" css-class="_text-between"
+            <mj-text padding="8px 20px 16px 20px" font-size="12px" css-class="_text-between _text-border-bottom"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
                 <b>Distributor</b> <span>Citipower</span>
             </mj-text>
-        </mj-column>
 
-        <mj-column padding-left="4px" css-class="column-border column-not-border-bottom">
-
-        <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
-                Electricity rates 
-            </mj-text>
-
-            <mj-text padding="0 20px" font-size="12px" css-class="_text-between _border-text"
-                     line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <b>Your meter type</b> <span>Single Rate</span>
-            </mj-text>
-
-            <mj-text padding="8px 20px" font-size="12px" css-class="_text-between"
-                     line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <b>Daily Supply Charge <span>(¢/day)</span></b> <span>93.50</span>
-            </mj-text>
-
-            <mj-text padding="0 20px" font-size="12px" css-class="_text-between"
-                     line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <b>Peak Usage <span>(¢/kWh)</span></b> <span>18.70</span>
-            </mj-text>
-
-            <mj-text padding="8px 20px 0px 20px" font-size="12px" css-class="_text-between _border-text _border-text-02"
-                     line-height="15px" font-weight="400" letter-spacing="0.16px">
-                All prices include GST.
-            </mj-text>
-
-            <mj-text padding="8px 20px 16px 20px" font-size="12px" css-class="_text-between"
-                     line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <b>Distributor</b> <span>Citipower</span>
-            </mj-text>
-        </mj-column>
-    </mj-section>
-
-    <mj-section padding="0 15px">
-        <mj-column padding-right="4px" css-class="column-border">
             <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
                 Gas rates
             </mj-text>
@@ -492,8 +443,92 @@
                 <b>Distributor</b> <span style="font-size: 11px;">Australian Gas Network East</span>
             </mj-text>
 
+
         </mj-column>
-        <mj-column padding-left="4px" css-class="column-border">
+        <mj-column padding-left="5px" css-class="column-border _column-no-padding-mobi">
+            <mj-text css-class="bt-heading" container-background-color="#009908" 
+                    color="#fff" align="center" font-size="18px" line-height="25px" 
+                    letter-spacing="-0.32px" padding="17px 0px"> 
+                <h2><span>sumo</span>ACN </h2>
+            </mj-text>
+            
+            <mj-text padding="16px 20px 0 32px" container-background-color="#fff">
+                <div class="bt-text-acn"> 
+                    <p>10%</p>
+                    <p><span>less</span> than the Victorian Default Offer.</p>
+                </div>
+            </mj-text>
+
+            <mj-text padding="13px 20px 0 20px" container-background-color="#fff">
+                <div class="bt-price"> 
+                    <div class="item">  
+                        <p class="_price"><sup>$</sup>107<span>mo</span> </p>
+                        <span class="_sub-price">$1,279 yr </span>
+                    </div>
+                    <div class="item">  
+                        <p class="_price"><sup>$</sup>110<span>mo</span> </p>
+                        <span class="_sub-price">$1,320 yr </span>
+                    </div>
+                </div>
+            </mj-text>
+
+            <mj-text padding="12px 20px 0 20px" container-background-color="#fff"
+                    font-size="12px" line-height="120%" letter-spacing="-0.32px" color="#404040"
+                    align="center">
+                GST incl. <a class="_underlined">Estimated price</a> based on a household using 4000kWh/yr on a single rate tariff in the Citipower distribution area.
+            </mj-text>
+
+            <mj-text padding="16px 20px" container-background-color="#fff">
+                <div class="bt-btn">  
+                    <a href="#!"> I want sumoACN EASY </a>
+                </div>
+            </mj-text>
+
+            <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
+                <div class="list-acn"> 
+                    <div class="_item-acn">  
+                        <img src="./assets/images/icon-check.svg" alt="icon" / >
+                        <div class="_text">  
+                            <b>Basic energy plan with flexible payment options</b>
+                        </div> 
+                    </div>
+                    <div class="_item-acn">  
+                        <img src="./assets/images/icon-check.svg" alt="icon" / >
+                        <div class="_text">  
+                            <b>10% less than the Victorian Default Offer</b>
+                        </div> 
+                    </div>
+                </div>
+            </mj-text>
+
+            <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
+                Electricity rates 
+            </mj-text>
+
+            <mj-text padding="0 20px" font-size="12px" css-class="_text-between _border-text"
+                     line-height="15px" font-weight="400" letter-spacing="0.16px">
+                <b>Your meter type</b> <span>Single Rate</span>
+            </mj-text>
+
+            <mj-text padding="8px 20px" font-size="12px" css-class="_text-between"
+                     line-height="15px" font-weight="400" letter-spacing="0.16px">
+                <b>Daily Supply Charge <span>(¢/day)</span></b> <span>93.50</span>
+            </mj-text>
+
+            <mj-text padding="0 20px" font-size="12px" css-class="_text-between"
+                     line-height="15px" font-weight="400" letter-spacing="0.16px">
+                <b>Peak Usage <span>(¢/kWh)</span></b> <span>18.70</span>
+            </mj-text>
+
+            <mj-text padding="8px 20px 0px 20px" font-size="12px" css-class="_text-between _border-text _border-text-02"
+                     line-height="15px" font-weight="400" letter-spacing="0.16px">
+                All prices include GST.
+            </mj-text>
+
+            <mj-text padding="8px 20px 16px 20px" font-size="12px" css-class="_text-between _text-border-bottom"
+                     line-height="15px" font-weight="400" letter-spacing="0.16px">
+                <b>Distributor</b> <span>Citipower</span>
+            </mj-text>
 
              <mj-text padding="16px 20px" font-size="14px" line-height="15px" font-weight="700" letter-spacing="-0.16px" align="center"> 
                 Gas rates
@@ -553,9 +588,10 @@
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
                 <b>Distributor</b> <span style="font-size: 11px;">Australian Gas Network East</span>
             </mj-text>
+            
         </mj-column>
-
     </mj-section>
+    <!-- END section main -->
 
     <mj-section padding="0 15px">
         <mj-column> 
@@ -565,11 +601,12 @@
         </mj-column>
     </mj-section>
 
+    <!-- footer -->
     <mj-section padding="20px 15px" background-color="#157EF4">
-         <mj-column  vertical-align="middle"> 
-            <mj-image width="107px" href="#!" padding="0" align="left" src="./assets/images/sumo-logo-white.svg" />
+         <mj-column  vertical-align="middle" width="30%"> 
+            <mj-image width="107px" href="#!" padding="0" css-class="logo-footer" align="left" src="./assets/images/sumo-logo-white.svg" />
         </mj-column>
-         <mj-column vertical-align="middle"> 
+         <mj-column vertical-align="middle" width="70%"> 
             <mj-text color="#fff" font-size="12px" line-height="15px" letter-spacing="-0.16px"
                     font-weight="500" align="left" css-class="_text-footer" padding="0"> 
                 Sumo Gas Pty Ltd ABN: 67 606 951 713<br/>
@@ -578,5 +615,6 @@
             </mj-text>
         </mj-column>
     </mj-section>
+    <!-- END footer -->
   </mj-body>
 </mjml>
