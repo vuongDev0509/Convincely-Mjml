@@ -24,13 +24,7 @@
                 font-weight:700;
             }
             .bt-text-acn{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                display: flex;
-                align-content: center;
-                align-items: center;
+                
             }
             .bt-text-acn p:first-child{
                 font-size: 30px;
@@ -38,12 +32,17 @@
                 font-weight: 500;
                 width: 90px;
                 color: #404040;
+                float: left;
+                width: 57px;
+                margin-right: 7px;
+                margin-top: 2px;
             }
             .bt-text-acn p:last-child{
                 font-size: 14px;
                 line-height: 120%;
                 color: #404040;
                 letter-spacing: -0.01em;
+                width: calc(100% - 64px);
             }
             .bt-text-acn p:last-child span{
                 font-weight: 800;
@@ -51,7 +50,7 @@
             .bt-text-acn p{
                 margin:0;
                 padding:0;
-                
+                display: inline-block;               
             }
             .bt-btn{
                 text-align:center;
@@ -82,21 +81,24 @@
                 transform: translateY(-50%);
                 right: 18px;
             }
-            .bt-price, .bt-price .item{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
+            .bt-price{
+                width: 100%;
+                
             }
             .bt-price .item{
                 width: 50%;
-                flex-wrap: wrap;
+                float: left;
+            }
+            .bt-price .item:last-child ._price{
+                display: inline;
             }
             .bt-price .item:first-child{
-                justify-content: flex-start;
+              
             }
             .bt-price .item:last-child{
-                justify-content: flex-end;
+                text-align: right;
+                -webkit-box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
+                -moz-box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
                 box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
             }
             .bt-price .item p{
@@ -115,7 +117,8 @@
                 padding-left: 20px;
             }
             .bt-price .item:last-child ._sub-price{
-                padding-left: 46px;
+                padding-left: 0px;
+                text-align: right;
             }
             .bt-price .item ._price:before{
                 content: " ";
@@ -154,19 +157,12 @@
                 text-align:center;
                 margin: 2px 0 0 0;
             }
-            .list-acn ._item-acn{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                align-content: flex-start;
-                align-items: flex-start;
-            }
             .list-acn ._item-acn:not(:last-child){
                 margin-bottom: 8px;
             }
             ._item-acn > img{
                 margin-right: 8px;
+                float: left;
             }
             ._item-acn ._text{
                 font-size: 12px;
@@ -198,19 +194,11 @@
              .column-not-border-top.column-border > table > tbody > tr > td > table > tbody{
                  border-top: none;
              }
-            ._text-between > div{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                -webkit-box-pack: space-between;
-                -moz-box-pack: space-between;
-                -ms-flex-pack: space-between;
-                -webkit-justify-content: space-between;
-                justify-content: space-between;
-            }
             ._text-between b > span{
                 font-weight: 400;
+            }
+            ._text-between > div > span{
+                float: right;
             }
             ._border-text > div{
                 padding-bottom: 8px;
@@ -221,21 +209,7 @@
                 padding-bottom: 12px;
             }
             ._text-footer > div{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
-                -webkit-box-pack: flex-end;
-                -moz-box-pack: flex-end;
-                -ms-flex-pack: flex-end;
-                -webkit-justify-content: flex-end;
-                justify-content: flex-end;
-            }
-            .bt-header > table > tbody > tr > td{
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flexbox;
-                display: -o-flex;
+                float: right;
             }
             @media only screen and (max-width: 599px){
                 .heading-ss-hero > div{
@@ -259,6 +233,7 @@
                 }
                 .bt-text-acn p:last-child{
                     width: calc(100% - 67px);
+                    max-width: 208px;
                 }
                 .bt-price .item:first-child ._sub-price{
                     text-align: left;
@@ -273,22 +248,26 @@
                     max-width: 430px !important;
                 }
             }
-            @media only screen and (max-width: 480px){
-                .logo-footer{
-                    display: -webkit-flex;
-                    display: -moz-flex;
-                    display: -ms-flexbox;
-                    display: -o-flex;
+            @media only screen and (max-width: 479px){
+                .bt-header > table > tbody > tr > td > div{
+                    width: 50% !important;
+                    float: left;
                 }
-                ._text-footer>div, .logo-footer{
-                     -webkit-box-pack: center;
-                    -moz-box-pack: center;
-                    -ms-flex-pack: center;
-                    -webkit-justify-content: center;
-                    justify-content: center;
+                .logo-footer > table{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                ._text-footer{
+                    width: 100%;
+                    text-align: center;
                 }
                 ._text-footer>div{
                     margin-top: 15px;
+                    display: inline-block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: inherit;
+                    text-align: left;
                 }               
             }
         </mj-style>
@@ -329,7 +308,7 @@
             <mj-text padding="16px 20px 0 32px" container-background-color="#fff">
                 <div class="bt-text-acn"> 
                     <p>15%</p>
-                    <p><span>less</span> than the VictorianDefault Offer.</p>
+                    <p><span>less</span> than the Victorian Default Offer.</p>
                 </div>
             </mj-text>
 
@@ -420,17 +399,17 @@
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>0 - 27 MJ per day:</span> <span>2.37</span>
+                0 - 27 MJ per day: <span>2.37</span>
             </mj-text>
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>27 - 50 MJ per day:</span> <span>2.31</span>
+                27 - 50 MJ per day: <span>2.31</span>
             </mj-text>
 
             <mj-text padding="0px 20px 8px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>50 MJ - Thereafter per day:</span> <span>1.68</span>
+                50 MJ - Thereafter per day: <span>1.68</span>
             </mj-text>
 
              <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
@@ -440,17 +419,17 @@
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>0 - 27 MJ per day:</span> <span>2.37</span>
+                0 - 27 MJ per day: <span>2.37</span>
             </mj-text>
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>27 - 50 MJ per day:</span> <span>2.31</span>
+                27 - 50 MJ per day: <span>2.31</span>
             </mj-text>
 
             <mj-text padding="0px 20px 8px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>50 MJ - Thereafter per day:</span> <span>1.68</span>
+                50 MJ - Thereafter per day: <span>1.68</span>
             </mj-text>
 
             <mj-text padding="8px 20px 0px 20px" font-size="12px" css-class="_text-between _border-text _border-text-02"
@@ -566,17 +545,17 @@
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>0 - 27 MJ per day:</span> <span>2.37</span>
+                0 - 27 MJ per day: <span>2.37</span>
             </mj-text>
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>27 - 50 MJ per day:</span> <span>2.31</span>
+                27 - 50 MJ per day: <span>2.31</span>
             </mj-text>
 
             <mj-text padding="0px 20px 8px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>50 MJ - Thereafter per day:</span> <span>1.68</span>
+                50 MJ - Thereafter per day: <span>1.68</span>
             </mj-text>
 
              <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
@@ -586,17 +565,17 @@
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>0 - 27 MJ per day:</span> <span>2.37</span>
+                0 - 27 MJ per day: <span>2.37</span>
             </mj-text>
 
             <mj-text padding="0px 20px 5px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>27 - 50 MJ per day:</span> <span>2.31</span>
+                27 - 50 MJ per day: <span>2.31</span>
             </mj-text>
 
             <mj-text padding="0px 20px 8px 20px" font-size="12px" css-class="_text-between"
                      line-height="15px" font-weight="400" letter-spacing="0.16px">
-                <span>50 MJ - Thereafter per day:</span> <span>1.68</span>
+                50 MJ - Thereafter per day: <span>1.68</span>
             </mj-text>
 
             <mj-text padding="8px 20px 0px 20px" font-size="12px" css-class="_text-between _border-text _border-text-02"

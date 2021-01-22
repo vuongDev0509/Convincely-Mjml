@@ -122,15 +122,7 @@
       font-weight: 700;
     }
 
-    .bt-text-acn {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
-      display: flex;
-      align-content: center;
-      align-items: center;
-    }
+    .bt-text-acn {}
 
     .bt-text-acn p:first-child {
       font-size: 30px;
@@ -138,6 +130,10 @@
       font-weight: 500;
       width: 90px;
       color: #404040;
+      float: left;
+      width: 57px;
+      margin-right: 7px;
+      margin-top: 2px;
     }
 
     .bt-text-acn p:last-child {
@@ -145,6 +141,7 @@
       line-height: 120%;
       color: #404040;
       letter-spacing: -0.01em;
+      width: calc(100% - 64px);
     }
 
     .bt-text-acn p:last-child span {
@@ -154,6 +151,7 @@
     .bt-text-acn p {
       margin: 0;
       padding: 0;
+      display: inline-block;
     }
 
     .bt-btn {
@@ -188,25 +186,25 @@
       right: 18px;
     }
 
-    .bt-price,
-    .bt-price .item {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
+    .bt-price {
+      width: 100%;
     }
 
     .bt-price .item {
       width: 50%;
-      flex-wrap: wrap;
+      float: left;
     }
 
-    .bt-price .item:first-child {
-      justify-content: flex-start;
+    .bt-price .item:last-child ._price {
+      display: inline;
     }
+
+    .bt-price .item:first-child {}
 
     .bt-price .item:last-child {
-      justify-content: flex-end;
+      text-align: right;
+      -webkit-box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
+      -moz-box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
       box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
     }
 
@@ -228,7 +226,8 @@
     }
 
     .bt-price .item:last-child ._sub-price {
-      padding-left: 46px;
+      padding-left: 0px;
+      text-align: right;
     }
 
     .bt-price .item ._price:before {
@@ -274,21 +273,13 @@
       margin: 2px 0 0 0;
     }
 
-    .list-acn ._item-acn {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
-      align-content: flex-start;
-      align-items: flex-start;
-    }
-
     .list-acn ._item-acn:not(:last-child) {
       margin-bottom: 8px;
     }
 
     ._item-acn>img {
       margin-right: 8px;
+      float: left;
     }
 
     ._item-acn ._text {
@@ -328,20 +319,12 @@
       border-top: none;
     }
 
-    ._text-between>div {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
-      -webkit-box-pack: space-between;
-      -moz-box-pack: space-between;
-      -ms-flex-pack: space-between;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-    }
-
     ._text-between b>span {
       font-weight: 400;
+    }
+
+    ._text-between>div>span {
+      float: right;
     }
 
     ._border-text>div {
@@ -355,22 +338,7 @@
     }
 
     ._text-footer>div {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
-      -webkit-box-pack: flex-end;
-      -moz-box-pack: flex-end;
-      -ms-flex-pack: flex-end;
-      -webkit-justify-content: flex-end;
-      justify-content: flex-end;
-    }
-
-    .bt-header>table>tbody>tr>td {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: -o-flex;
+      float: right;
     }
 
     @media only screen and (max-width: 599px) {
@@ -399,6 +367,7 @@
 
       .bt-text-acn p:last-child {
         width: calc(100% - 67px);
+        max-width: 208px;
       }
 
       .bt-price .item:first-child ._sub-price {
@@ -417,25 +386,29 @@
       }
     }
 
-    @media only screen and (max-width: 480px) {
-      .logo-footer {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: -o-flex;
+    @media only screen and (max-width: 479px) {
+      .bt-header>table>tbody>tr>td>div {
+        width: 50% !important;
+        float: left;
       }
 
-      ._text-footer>div,
-      .logo-footer {
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
+      .logo-footer>table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      ._text-footer {
+        width: 100%;
+        text-align: center;
       }
 
       ._text-footer>div {
         margin-top: 15px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        float: inherit;
+        text-align: left;
       }
     }
   </style>
@@ -559,7 +532,7 @@
                                 <div style="font-family:Montserrat, sans-serif;font-size:13px;line-height:1;text-align:left;color:#404040;">
                                   <div class="bt-text-acn">
                                     <p>15%</p>
-                                    <p><span>less</span> than the VictorianDefault Offer.</p>
+                                    <p><span>less</span> than the Victorian Default Offer.</p>
                                   </div>
                                 </div>
                               </td>
@@ -661,17 +634,17 @@
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>0 - 27 MJ per day:</span> <span>2.37</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">0 - 27 MJ per day: <span>2.37</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>27 - 50 MJ per day:</span> <span>2.31</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">27 - 50 MJ per day: <span>2.31</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 8px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>50 MJ - Thereafter per day:</span> <span>1.68</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">50 MJ - Thereafter per day: <span>1.68</span></div>
                               </td>
                             </tr>
                             <tr>
@@ -681,17 +654,17 @@
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>0 - 27 MJ per day:</span> <span>2.37</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">0 - 27 MJ per day: <span>2.37</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>27 - 50 MJ per day:</span> <span>2.31</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">27 - 50 MJ per day: <span>2.31</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 8px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>50 MJ - Thereafter per day:</span> <span>1.68</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">50 MJ - Thereafter per day: <span>1.68</span></div>
                               </td>
                             </tr>
                             <tr>
@@ -833,17 +806,17 @@
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>0 - 27 MJ per day:</span> <span>2.37</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">0 - 27 MJ per day: <span>2.37</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>27 - 50 MJ per day:</span> <span>2.31</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">27 - 50 MJ per day: <span>2.31</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 8px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>50 MJ - Thereafter per day:</span> <span>1.68</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">50 MJ - Thereafter per day: <span>1.68</span></div>
                               </td>
                             </tr>
                             <tr>
@@ -853,17 +826,17 @@
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>0 - 27 MJ per day:</span> <span>2.37</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">0 - 27 MJ per day: <span>2.37</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 5px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>27 - 50 MJ per day:</span> <span>2.31</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">27 - 50 MJ per day: <span>2.31</span></div>
                               </td>
                             </tr>
                             <tr>
                               <td align="left" class="_text-between" style="font-size:0px;padding:0px 20px 8px 20px;word-break:break-word;">
-                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;"><span>50 MJ - Thereafter per day:</span> <span>1.68</span></div>
+                                <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:400;letter-spacing:0.16px;line-height:15px;text-align:left;color:#404040;">50 MJ - Thereafter per day: <span>1.68</span></div>
                               </td>
                             </tr>
                             <tr>
