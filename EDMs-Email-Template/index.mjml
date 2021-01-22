@@ -280,10 +280,10 @@
     <!--Header -->
     <mj-section padding="32px 15px 50px 15px" css-class="bt-header">
         <mj-column> 
-            <mj-image width="116px" href="#!" padding="0" align="left" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/acn-logo.png" />
+            <mj-image width="116px" href="#!" padding="0" align="left" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/acn-logo.png" />
         </mj-column>
          <mj-column> 
-            <mj-image width="107px" href="#!" padding="0" align="right" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/sumo-logo.png" />
+            <mj-image width="107px" href="#!" padding="0" align="right" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/sumo-logo.png" />
         </mj-column>
     </mj-section>
 
@@ -344,13 +344,13 @@
             <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
                 <div class="list-acn"> 
                     <div class="_item-acn">  
-                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/icon-check.png" alt="icon" / >
+                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/icon-check.png" alt="icon" / >
                         <div class="_text">  
                             <b>Great rates for direct debit and e-bills only.</b> <a href="#!" class="_underlined">Conditions apply</a>
                         </div> 
                     </div>
                     <div class="_item-acn">  
-                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/icon-check.png" alt="icon" / >
+                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/icon-check.png" alt="icon" / >
                         <div class="_text">  
                             <b>15% less than the Victorian Default Offer</b>
                         </div> 
@@ -490,13 +490,13 @@
             <mj-text padding="0px 20px 20px 20px " container-background-color="#fff">  
                 <div class="list-acn"> 
                     <div class="_item-acn">  
-                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/icon-check.png" alt="icon" / >
+                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/icon-check.png" alt="icon" / >
                         <div class="_text">  
                             <b>Basic energy plan with flexible payment options</b>
                         </div> 
                     </div>
                     <div class="_item-acn">  
-                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/icon-check.png" alt="icon" / >
+                        <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/icon-check.png" alt="icon" / >
                         <div class="_text">  
                             <b>10% less than the Victorian Default Offer</b>
                         </div> 
@@ -607,7 +607,7 @@
     <!-- footer -->
     <mj-section padding="20px 15px" background-color="#157EF4">
          <mj-column  vertical-align="middle" width="30%"> 
-            <mj-image width="107px" href="#!" padding="0" css-class="logo-footer" align="left" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs%20Email%20Template/assets/images/sumo-logo-white.png" />
+            <mj-image width="107px" href="#!" padding="0" css-class="logo-footer" align="left" src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template//assets/images/sumo-logo-white.png" />
         </mj-column>
          <mj-column vertical-align="middle" width="70%"> 
             <mj-text color="#fff" font-size="12px" line-height="15px" letter-spacing="-0.16px"
