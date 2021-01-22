@@ -211,6 +211,9 @@
             ._text-footer > div{
                 float: right;
             }
+            _text-footer a{
+                color: inherit !important;
+            }
             @media only screen and (max-width: 599px){
                 .heading-ss-hero > div{
                     font-size: 20px !important;
@@ -608,7 +611,7 @@
          <mj-column vertical-align="middle" width="70%"> 
             <mj-text color="#fff" font-size="12px" line-height="15px" letter-spacing="-0.16px"
                     font-weight="500" align="left" css-class="_text-footer" padding="0"> 
-                Sumo Gas Pty Ltd ABN: 67 606 951 713<br/>
+                Sumo Gas Pty Ltd ABN: 67 606 951 713 <br/>
                 Sumo Power Pty Ltd ABN: 86 601 199 151 <br/>
                 Sumo Telco Pty Ltd ABN: 19 621 160 058 <br/>
             </mj-text>
