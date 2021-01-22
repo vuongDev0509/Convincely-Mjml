@@ -83,7 +83,6 @@
             }
             .bt-price{
                 width: 100%;
-                
             }
             .bt-price .item{
                 width: 50%;
@@ -92,9 +91,14 @@
             .bt-price .item:last-child ._price{
                 display: inline;
             }
-            .bt-price .item:first-child{
-              
+            .bt-price .item:first-child img{
+                margin-right: 5px;
             }
+            
+            .bt-price .item:first-child ._price img{
+              float: left;
+            }
+            
             .bt-price .item:last-child{
                 text-align: right;
                 -webkit-box-shadow: inset 1px 0px 0px rgba(64, 64, 64, 0.2);
@@ -113,33 +117,9 @@
                 line-height: 110%;
                 position: relative;
             }
-            .bt-price .item:first-child ._price{
-                padding-left: 20px;
-            }
             .bt-price .item:last-child ._sub-price{
                 padding-left: 0px;
                 text-align: right;
-            }
-            .bt-price .item ._price:before{
-                content: " ";
-                display: inline-block;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                position: absolute;
-                top:0;
-            }
-            .bt-price .item:first-child ._price:before{
-                background-image: url("https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png");
-                width:18px;
-                height: 24px;
-                left:-4px;
-            }
-            .bt-price .item:last-child ._price:before{
-                background-image: url("https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png");
-                width:17px;
-                height: 24px;
-                left: -22px;
             }
             .bt-price .item ._price > span{
                 font-size: 17px;
@@ -224,7 +204,7 @@
                     padding: 0 !important;
                 }
 
-                ._column-no-padding-mobi:last-child{
+                ._column-no-padding-mobi._column-mobile{
                     margin-top: 15px;
                 } 
                 .section-main .mj-column-per-50{
@@ -268,11 +248,16 @@
                 ._text-footer>div{
                     margin-top: 15px;
                     display: inline-block;
+                    width: 100%;
                     margin-left: auto;
                     margin-right: auto;
                     float: inherit;
-                    text-align: left;
-                }               
+                    text-align: center !important;
+                   
+                }      
+                ._text-footer>div span{
+                    float: right;
+                }         
             }
         </mj-style>
    </mj-head>
@@ -319,11 +304,11 @@
             <mj-text padding="13px 20px 0 20px" container-background-color="#ffffff">
                 <div class="bt-price"> 
                     <div class="item">  
-                        <p class="_price"><sup>$</sup>103<span>mo</span> </p>
+                        <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png" alt="icon" / > <sup>$</sup>103<span>mo</span> </p>
                         <span class="_sub-price">$1,235 yr </span>
                     </div>
                     <div class="item">  
-                        <p class="_price"><sup>$</sup>105<span>mo</span> </p>
+                        <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png" alt="icon" / > <sup>$</sup>105<span>mo</span> </p>
                         <span class="_sub-price">$1,265 yr </span>
                     </div>
                 </div>
@@ -448,7 +433,7 @@
 
 
         </mj-column>
-        <mj-column padding-left="5px" css-class="column-border _column-no-padding-mobi">
+        <mj-column padding-left="5px" css-class="column-border _column-no-padding-mobi _column-mobile">
             <mj-text css-class="bt-heading" container-background-color="#009908" 
                     color="#fff" align="center" font-size="18px" line-height="25px" 
                     letter-spacing="-0.32px" padding="17px 0px"> 
@@ -464,12 +449,13 @@
 
             <mj-text padding="13px 20px 0 20px" container-background-color="#fff">
                 <div class="bt-price"> 
-                    <div class="item">  
-                        <p class="_price"><sup>$</sup>107<span>mo</span> </p>
+                    <div class="item">
+                          
+                        <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png" alt="icon" / > <sup>$</sup>107<span>mo</span> </p>
                         <span class="_sub-price">$1,279 yr </span>
                     </div>
                     <div class="item">  
-                        <p class="_price"><sup>$</sup>110<span>mo</span> </p>
+                        <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png" alt="icon" / > <sup>$</sup>110<span>mo</span> </p>
                         <span class="_sub-price">$1,320 yr </span>
                     </div>
                 </div>
@@ -612,9 +598,9 @@
          <mj-column vertical-align="middle" width="70%"> 
             <mj-text color="#fff" font-size="12px" line-height="15px" letter-spacing="-0.16px"
                     font-weight="500" align="left" css-class="_text-footer" padding="0"> 
-                Sumo Gas Pty Ltd ABN:  67 606 951 713 <br/>
-                Sumo Power Pty Ltd ABN: 86 601 199 151 <br/>
-                Sumo Telco Pty Ltd ABN: 19 621 160 058 <br/>
+                Sumo Gas Pty Ltd ABN: 67 606 951 713<br/>
+                Sumo Power Pty Ltd ABN: 86 601 199 151<br/>
+                Sumo Telco Pty Ltd ABN: 19 621 160 058<br/>
             </mj-text>
         </mj-column>
     </mj-section>

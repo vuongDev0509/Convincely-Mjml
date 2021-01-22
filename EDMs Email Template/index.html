@@ -199,7 +199,13 @@
       display: inline;
     }
 
-    .bt-price .item:first-child {}
+    .bt-price .item:first-child img {
+      margin-right: 5px;
+    }
+
+    .bt-price .item:first-child ._price img {
+      float: left;
+    }
 
     .bt-price .item:last-child {
       text-align: right;
@@ -221,37 +227,9 @@
       position: relative;
     }
 
-    .bt-price .item:first-child ._price {
-      padding-left: 20px;
-    }
-
     .bt-price .item:last-child ._sub-price {
       padding-left: 0px;
       text-align: right;
-    }
-
-    .bt-price .item ._price:before {
-      content: " ";
-      display: inline-block;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      top: 0;
-    }
-
-    .bt-price .item:first-child ._price:before {
-      background-image: url("https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png");
-      width: 18px;
-      height: 24px;
-      left: -4px;
-    }
-
-    .bt-price .item:last-child ._price:before {
-      background-image: url("https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png");
-      width: 17px;
-      height: 24px;
-      left: -22px;
     }
 
     .bt-price .item ._price>span {
@@ -356,7 +334,7 @@
         padding: 0 !important;
       }
 
-      ._column-no-padding-mobi:last-child {
+      ._column-no-padding-mobi._column-mobile {
         margin-top: 15px;
       }
 
@@ -410,10 +388,15 @@
       ._text-footer>div {
         margin-top: 15px;
         display: inline-block;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         float: inherit;
-        text-align: left;
+        text-align: center !important;
+      }
+
+      ._text-footer>div span {
+        float: right;
       }
     }
   </style>
@@ -547,11 +530,11 @@
                                 <div style="font-family:Montserrat, sans-serif;font-size:13px;line-height:1;text-align:left;color:#404040;">
                                   <div class="bt-price">
                                     <div class="item">
-                                      <p class="_price"><sup>$</sup>103<span>mo</span> </p>
+                                      <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png" alt="icon" /> <sup>$</sup>103<span>mo</span> </p>
                                       <span class="_sub-price">$1,235 yr </span>
                                     </div>
                                     <div class="item">
-                                      <p class="_price"><sup>$</sup>105<span>mo</span> </p>
+                                      <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png" alt="icon" /> <sup>$</sup>105<span>mo</span> </p>
                                       <span class="_sub-price">$1,265 yr </span>
                                     </div>
                                   </div>
@@ -689,8 +672,8 @@
                   </tbody>
                 </table>
               </div>
-              <!--[if mso | IE]></td><td class="column-border-outlook _column-no-padding-mobi-outlook" style="vertical-align:top;width:285px;" ><![endif]-->
-              <div class="mj-column-per-50 mj-outlook-group-fix column-border _column-no-padding-mobi" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <!--[if mso | IE]></td><td class="column-border-outlook _column-no-padding-mobi-outlook _column-mobile-outlook" style="vertical-align:top;width:285px;" ><![endif]-->
+              <div class="mj-column-per-50 mj-outlook-group-fix column-border _column-no-padding-mobi _column-mobile" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
@@ -719,11 +702,11 @@
                                 <div style="font-family:Montserrat, sans-serif;font-size:13px;line-height:1;text-align:left;color:#404040;">
                                   <div class="bt-price">
                                     <div class="item">
-                                      <p class="_price"><sup>$</sup>107<span>mo</span> </p>
+                                      <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon002.png" alt="icon" /> <sup>$</sup>107<span>mo</span> </p>
                                       <span class="_sub-price">$1,279 yr </span>
                                     </div>
                                     <div class="item">
-                                      <p class="_price"><sup>$</sup>110<span>mo</span> </p>
+                                      <p class="_price"> <img src="https://vuongdev0509.github.io/Convincely-Mjml/EDMs-Email-Template/assets/images/icon001.png" alt="icon" /> <sup>$</sup>110<span>mo</span> </p>
                                       <span class="_sub-price">$1,320 yr </span>
                                     </div>
                                   </div>
@@ -929,7 +912,7 @@
                   <tbody>
                     <tr>
                       <td align="left" class="_text-footer" style="font-size:0px;padding:0;word-break:break-word;">
-                        <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:500;letter-spacing:-0.16px;line-height:15px;text-align:left;color:#ffffff;">Sumo Gas Pty Ltd ABN: 67 606 951 713 <br /> Sumo Power Pty Ltd ABN: 86 601 199 151 <br /> Sumo Telco Pty Ltd ABN: 19 621 160 058 <br /></div>
+                        <div style="font-family:Montserrat, sans-serif;font-size:12px;font-weight:500;letter-spacing:-0.16px;line-height:15px;text-align:left;color:#ffffff;">Sumo Gas Pty Ltd ABN: 67 606 951 713<br /> Sumo Power Pty Ltd ABN: 86 601 199 151<br /> Sumo Telco Pty Ltd ABN: 19 621 160 058<br /></div>
                       </td>
                     </tr>
                   </tbody>
